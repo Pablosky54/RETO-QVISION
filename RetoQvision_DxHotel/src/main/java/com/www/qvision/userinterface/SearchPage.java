@@ -12,10 +12,10 @@ public class SearchPage extends PageObject{
 	
 	
 	public static final Target PRICE = Target.the("Price per night")
-            .located(By.xpath("//div//p//class[@class='rate-number']"));
+            .located(By.xpath("//div//p[@class='rate-number']"));
 	
 	public static final Target TOTAL_PRICE = Target.the("Price total")
-            .located(By.xpath("//div//p//class[@class='total-price']"));
+            .located(By.xpath("//div//h4[@class='total-price']"));
 	
 
 }
