@@ -1,0 +1,38 @@
+logs
+*.log
+*.pid
+*.seed
+node_modules/
+.sass-cache/
+research/
+test/
+backup/
+examples/uploads/**/*
+*.bat
+*.sh
+.project
+.url
+css/*.map
+
+# Package Files #
+#*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Serenity-BDD
+**/target/
+
+# Gradle
+**/.gradle/
+#**/gradle/
+**/build/
+#**/gradlew.bat
+#**/gradlew
+
+# Intellij
+**/.idea/
+**/out/
