@@ -6,18 +6,18 @@ import java.util.List;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.targets.Target;
 
-public class Remplace {
+public class Replace {
 	
 	
-	public static Remplace newIntance() {
+	public static Replace newIntance() {
 		
-		Remplace remplace = new Remplace();
+		Replace remplace = new Replace();
 		return remplace;
 	}
 	
 	
 	
-	public Remplace() {}
+	public Replace() {}
 
 	public static List<Integer> change(Target target, Actor actor) {
 		List<Integer> list = new ArrayList<>();

@@ -5,7 +5,7 @@ import java.util.List;
 
 import com.www.qvision.userinterface.SearchPage;
 import com.www.qvision.util.ConvertDate;
-import com.www.qvision.util.Remplace;
+import com.www.qvision.util.Replace;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -37,7 +37,7 @@ public class ComparePrice implements Task {
 	@Step("{0} chose a most cheap option")
 	public <T extends Actor> void performAs(T actor) {
 
-		List<Integer> prices = Remplace.change(SearchPage.PRICE, actor);
+		List<Integer> prices = Replace.change(SearchPage.PRICE, actor);
 		Collections.sort(prices);
 		pagePrice = operation(prices.get(0), ConvertDate.returnTotalDays(checkIn, checkOut));
 
@@ -49,7 +49,7 @@ public class ComparePrice implements Task {
 		return Tasks.instrumented(ComparePrice.class, checkIn, checkOut);
 	}
 
-	private float operation(int price, float days) {
+	private float operation(float price, float days) {
 
 		return price * days;
 	}

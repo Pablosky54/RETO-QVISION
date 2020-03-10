@@ -15,7 +15,7 @@ public class ConvertDate {
 	private static final Logger LOGGER = Logger.getLogger("");
 
 	private static Date ParseDate(String date) {
-		SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat format = new SimpleDateFormat("mm/dd/yyyy");
 		Date dateOut = null;
 		try {
 			dateOut = format.parse(date);

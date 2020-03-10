@@ -5,13 +5,13 @@ import static com.www.qvision.userinterface.HomePage.DATE_FINISH;
 import static com.www.qvision.userinterface.HomePage.DATE_INIT;
 import static com.www.qvision.userinterface.HomePage.DESTINATION;
 
+import com.www.qvision.userinterface.HomePage;
+
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.matchers.statematchers.IsEnabledMatcher;
-import net.serenitybdd.screenplay.waits.WaitUntil;
 
 public class PutOption implements Task {
 
@@ -30,8 +30,13 @@ public class PutOption implements Task {
 	public <T extends Actor> void performAs(T actor) {
 
 		
-		actor.attemptsTo(Enter.keyValues(location).into(DESTINATION), Enter.keyValues(checkIn).into(DATE_INIT),
-				Enter.keyValues(checkOut).into(DATE_FINISH), Click.on(BOTTON_SEARCH));
+		
+		actor.attemptsTo(Click.on(HomePage.LOCATION),Click.on(DESTINATION.of(location).resolveFor(actor))				
+				,Enter.keyValues(checkOut).into(DATE_FINISH)
+				,Enter.keyValues(checkIn).into(DATE_INIT)
+				//,Enter.keyValues("1").into(HomePage.ROOMS)
+				//,Enter.keyValues("1").into(HomePage.PEOPLE)
+				,Click.on(BOTTON_SEARCH));
 
 	}
 
