@@ -25,22 +25,21 @@ public class ConvertDate {
 		return dateOut;
 	}
 
-	public static int returnTotalDays(String checkIn, String checkOut) {
+	public static float returnTotalDays(String checkIn, String checkOut) {
 
-		int totalDays = 0;
+		float daysBetween = 0;
 
 		try {
 			Date dateBefore = ConvertDate.ParseDate(checkIn);
 			Date dateAfter = ConvertDate.ParseDate(checkOut);
 			long difference = dateAfter.getTime() - dateBefore.getTime();
-			float daysBetween = (difference / (1000 * 60 * 60 * 24));
-			float daysBetween2 = TimeUnit.DAYS.convert(difference, TimeUnit.MILLISECONDS);
+			daysBetween = (difference / (1000 * 60 * 60 * 24));
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
-		return totalDays;
+		return daysBetween;
 	}
 
 }

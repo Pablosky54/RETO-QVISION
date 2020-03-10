@@ -21,7 +21,7 @@ public class Replace {
 
 	public static List<Integer> change(Target target, Actor actor) {
 		List<Integer> list = new ArrayList<>();
-		for(int i=0;i <= target.resolveAllFor(actor).size();i++) {
+		for(int i=0;i < target.resolveAllFor(actor).size();i++) {
 			
 			list.add(Integer.parseInt(target.resolveAllFor(actor).get(i).getText().replaceAll("[$ ]", "")));
 		}

@@ -33,9 +33,7 @@ public class PutOption implements Task {
 		
 		actor.attemptsTo(Click.on(HomePage.LOCATION),Click.on(DESTINATION.of(location).resolveFor(actor))				
 				,Enter.keyValues(checkOut).into(DATE_FINISH)
-				,Enter.keyValues(checkIn).into(DATE_INIT)
-				//,Enter.keyValues("1").into(HomePage.ROOMS)
-				//,Enter.keyValues("1").into(HomePage.PEOPLE)
+				,Enter.keyValues(checkIn).into(DATE_INIT)				
 				,Click.on(BOTTON_SEARCH));
 
 	}
