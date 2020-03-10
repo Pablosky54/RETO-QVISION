@@ -13,7 +13,7 @@ public class HomePage extends PageObject{
     }
 	
 	public static final Target DESTINATION = Target.the("Search box of destination in home page")
-            .located(By.id("dx_dx-a559d417-f8cc-bace-cca2-d6077d855f9b_location"));
+            .located(By.xpath("//*[@id=\"dx_dx-a559d417-f8cc-bace-cca2-d6077d855f9b_location\"]"));
 	
 	public static final Target DATE_INIT = Target.the("Box of date init in home page")
             .located(By.id("dx_dx-a559d417-f8cc-bace-cca2-d6077d855f9b_checkIn"));
@@ -23,6 +23,9 @@ public class HomePage extends PageObject{
 	
 	public static final Target ROOMS = Target.the("Box chose rooms in home page")
             .located(By.id("dx_dx-a559d417-f8cc-bace-cca2-d6077d855f9b_rooms"));
+	
+	public static final Target PEOPLE = Target.the("Box chose people in home page")
+            .located(By.id("dx_dx-a559d417-f8cc-bace-cca2-d6077d855f9b_adults"));
 	
 	public static final Target BOTTON_SEARCH = Target.the("Botton start of search in home page")
             .located(By.xpath("//div//span[contains(text(),'SEARCH')]"));
